@@ -4,7 +4,12 @@ import { openrouter } from '../lib/ai'
 export default {
     async generateRecipe(prompt: string) {
         const result = streamText({
-            model: openrouter('')
+            model: openrouter('openai/gpt-oss-20b:free'),
+            prompt
         })
+
+        console.log(result)
+
+        return result.textStream
     }
 }
