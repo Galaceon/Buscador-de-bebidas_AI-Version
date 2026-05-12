@@ -8,7 +8,6 @@ export default {
             prompt
         })
 
-        console.log(result)
 
         return result.textStream
     }
